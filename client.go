@@ -38,7 +38,7 @@ func (c *clientHandle) Handle(req ziface.IRequest) {
 	fmt.Println("client send an error message")
 }
 
-func mainC() {
+func main() {
 	client := znet.NewClient("127.0.0.1", 8899)
 	client.SetOnConnStart(clientStartup)
 	client.AddRouter(200,&clientHandle{})
