@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"zinx-mmo-game/apis"
 	"zinx-mmo-game/core"
-	"zinx/ziface"
-	"zinx/znet"
+
+	"github.com/aceld/zinx/ziface"
+	"github.com/aceld/zinx/znet"
 )
 
 // 当前客户端建立连接之后的hook函数
@@ -32,7 +33,7 @@ func OnConnecionAdd(conn ziface.IConnection) {
 
 func main() {
 	// 创建服务句柄
-	s := znet.NewServer("MMO GAME SERVER")
+	s := znet.NewServer()
 
 	// 注册客户端连接建立函数
 	s.SetOnConnStart(OnConnecionAdd)
