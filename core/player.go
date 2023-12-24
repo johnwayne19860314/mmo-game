@@ -2,10 +2,10 @@ package core
 
 import (
 	"fmt"
+	"github.com/aceld/zinx/ziface"
 	"math/rand"
 	"sync"
 	"zinx-mmo-game/pb"
-	"zinx/ziface"
 
 	"github.com/golang/protobuf/proto"
 )
